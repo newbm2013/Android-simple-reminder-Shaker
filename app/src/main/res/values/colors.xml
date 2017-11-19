@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="event_color">#c1bf93</color>
+    <color name="header_normal">#7b7979</color>
+    <color name="header_pressed">@android:color/black</color>
+    <color name="menu_section_header">@android:color/black</color>
+    <color name="colorAccent">@android:color/black</color>
+    <color name="colorPrimaryDark">@android:color/holo_red_light</color>
+    <color name="colorPrimary">@android:color/holo_red_light</color>
+    <color name="ColorPrimary">#f96d40</color>
+    <color name="ColorPrimaryDark">#E64A19</color>
+    <color name="gray">#7b7979</color>
+</resources>

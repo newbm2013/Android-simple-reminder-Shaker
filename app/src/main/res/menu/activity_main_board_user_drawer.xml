@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Sign_out"
+            android:icon="@drawable/ic_menu_signout"
+            android:title="Sign out"
+            tools:ignore="HardcodedText" />
+    </group>
+
+</menu>
