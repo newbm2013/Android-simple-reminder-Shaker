@@ -58,16 +58,19 @@ public class ItemsRecyclerAdapter
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.eventDate.setText(ItemsList.get(position).getEventDate());
         holder.eventTime.setText(ItemsList.get(position).getEventTime());
 
         holder.eventTitle.setText(ItemsList.get(position).getEventTitle());
-        eventDetails = ItemsList.get(position).getEventDetail();
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String any= ItemsList.get(position).getEventTitle();
+                int i = position;
+                eventDetails = ItemsList.get(position).getEventDetail();
+
                 Intent detailIntent = new Intent(context, DetailsActivity.class);
                 detailIntent.putExtra("eventDetails" , eventDetails);
                 context.startActivity(detailIntent);

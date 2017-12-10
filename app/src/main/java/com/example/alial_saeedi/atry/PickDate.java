@@ -142,7 +142,7 @@ public class PickDate extends AppCompatActivity implements
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
         user = mAuthListener.getCurrentUser();
-        settingsReference = firebaseDatabase.getReference("Admins");
+        settingsReference = firebaseDatabase.getReference("Editors");
 
         // Check if picker mode is specified in Style.xml
         modeDarkTime.setChecked(Utils.isDarkTheme(this, modeDarkTime.isChecked()));
@@ -364,9 +364,9 @@ public class PickDate extends AppCompatActivity implements
         getRealm().commitTransaction();
 
         Intent mainIntent = new Intent(this,MainBoardUser.class);
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         mainIntent.putExtra("event", event);
         startActivity(mainIntent);
-        finish();
     }
 
     public void getDefaultSettings() {

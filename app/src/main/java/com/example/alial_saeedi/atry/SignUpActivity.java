@@ -67,7 +67,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         });
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Users");
+        databaseReference = firebaseDatabase.getReference("Users").child("Users");
         firebaseAuth = FirebaseAuth.getInstance();
         createAccountButton.setOnClickListener(this);
         mAuthListener = new FirebaseAuth.AuthStateListener() {
